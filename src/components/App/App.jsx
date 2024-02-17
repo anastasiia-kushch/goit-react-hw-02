@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import './App.css';
 import Description from '../Description/Description';
 import Options from '../Options/Options';
 import Feedback from '../Feedback/Feedback';
@@ -56,7 +55,7 @@ function App() {
   // в Options через пропси передаємо функцію updateFeedback, resetFeedback і значення totalFeedback
 
   // далі умовний рендеринг (записуємо як jsx-вираз, а аргументи в дужках()) - якщо totalFeedback === 0 (тобто всі значення обʼєкта стану по 0), то виводимо компонент нотіфікейшн про те, що фідбеку ще нема, в іншому випадку (якщо якісь значенння вже записані) - показуємо компонент Feedback зі значеннями
-  
+
   // в Notification пропом передаємо повідомлення так само: як і для компонента Description 
   // в Feedback пропом передаємо обʼєкт feedback та значення totalFeedback для подальшої обробки всредині компонента
   return (

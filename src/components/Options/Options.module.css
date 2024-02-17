@@ -1,0 +1,34 @@
+.div {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+button {
+  transition: all 500ms linear;
+}
+
+.good:hover,
+.good:focus {
+  background-color: #bbf3a4;
+  border: 1px solid #4c6542;
+}
+
+.neutral:hover,
+.neutral:focus {
+  background-color: #f3eaa4;
+  border: 1px solid #656242;
+}
+
+.bad:hover,
+.bad:focus {
+  background-color: #f3aba4;
+  border: 1px solid #654242;
+}
+
+.reset:hover,
+.reset:focus {
+  background-color: #aaaaaa;
+  border: 1px solid #565656;
+}
