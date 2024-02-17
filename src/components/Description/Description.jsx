@@ -1,11 +1,8 @@
-export default function Description() {
+export default function Description({ name, message }) { // в пропах отримали значення name і message і підставляємо їх відповідно
   return (
     <>
-      <h1>Sip Happens Café</h1>
-      <p>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
+      <h1>{name}</h1>
+      <p>{message}</p>
     </>
   );
-};
+}
