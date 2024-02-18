@@ -23,8 +23,8 @@ function App() {
   //записуємо сюди або існуюче значення feedback, або нульове
 
   useEffect(() => {
-    window.localStorage.setItem('feedback', JSON.stringify(feedback), [feedback]);
-  });
+    window.localStorage.setItem('feedback', JSON.stringify(feedback));
+  }, [feedback]);
   //використовуємо ефект, щоб відстежувати зміни для feedback (записали feedback в масив, що означає, що ефект спрацює при монтуванні і при кожному оновленні)
 
   const updateFeedback = (feedbackType) => {
