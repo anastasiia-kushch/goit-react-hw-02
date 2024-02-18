@@ -23,9 +23,7 @@ function App() {
   //записуємо сюди або існуюче значення feedback, або нульове
 
   useEffect(() => {
-    window.localStorage.setItem('feedback', JSON.stringify(feedback), [
-      feedback,
-    ]);
+    window.localStorage.setItem('feedback', JSON.stringify(feedback), [feedback]);
   });
   //використовуємо ефект, щоб відстежувати зміни для feedback (записали feedback в масив, що означає, що ефект спрацює при монтуванні і при кожному оновленні)
 
@@ -49,14 +47,13 @@ function App() {
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
   //логічно робити ці підрахунки тут, бо саме тут ми відстежуємо зміни в обʼєкті feedback
 
-
   // повертаємо Description, в якому через пропси передаємо імʼя і повідомлення, які беремо х обʼєкта дата, щоб у майбутньому можна було динамічно підставляти значення
 
   // в Options через пропси передаємо функцію updateFeedback, resetFeedback і значення totalFeedback
 
   // далі умовний рендеринг (записуємо як jsx-вираз, а аргументи в дужках()) - якщо totalFeedback === 0 (тобто всі значення обʼєкта стану по 0), то виводимо компонент нотіфікейшн про те, що фідбеку ще нема, в іншому випадку (якщо якісь значенння вже записані) - показуємо компонент Feedback зі значеннями
 
-  // в Notification пропом передаємо повідомлення так само: як і для компонента Description 
+  // в Notification пропом передаємо повідомлення так само: як і для компонента Description
   // в Feedback пропом передаємо обʼєкт feedback та значення totalFeedback для подальшої обробки всредині компонента
   return (
     <>
